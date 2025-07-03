@@ -33,12 +33,13 @@ class View(ft.UserControl):
                                   hint_text="Anno da analizzare per gli avvistamenti.")
         self.ddstate = ft.Dropdown(label="Stato",
                                    hint_text="Stato da analizzare per gli avvistamenti.")
+        self._controller.fillDDs()
         self.btn_graph = ft.ElevatedButton(text="Crea Grafo",
                                            tooltip="Crea il grafo del punto 1",
                                            on_click=self._controller.handle_graph)
         self.btn_path = ft.ElevatedButton(text="Calcola percorso",
                                           tooltip="Risolvi il punto 2",
-                                          on_click=self._controller.handle_path)
+                                          on_click=self._controller.handle_path, disabled = True)
 
         row1 = ft.Row([self.ddyear, self.ddstate, self.btn_graph, self.btn_path],
                       alignment=ft.MainAxisAlignment.SPACE_EVENLY)

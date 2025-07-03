@@ -67,6 +67,7 @@ class Model:
             return True
         if parziale[-3].datetime.month == parziale[-2].datetime.month and parziale[-2].datetime.month == parziale[-1].datetime.month:
             return nodo.datetime.month != parziale[-1].datetime.month
+        return True
 
     def _calcolaScore(self, soluzione):
         punteggio = 0

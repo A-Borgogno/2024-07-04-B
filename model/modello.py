@@ -65,7 +65,7 @@ class Model:
             return False
         if len(parziale) < 3:
             return True
-        if parziale[-3].datetime.month == parziale[-2].datetime.month and parziale[-2].datetime.month == parziale[-1].datetime.month:
+        if parziale[-3].datetime.month == parziale[-2].datetime.month == parziale[-1].datetime.month:
             return nodo.datetime.month != parziale[-1].datetime.month
         return True
 
